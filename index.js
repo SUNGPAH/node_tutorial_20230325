@@ -18,7 +18,12 @@ app.use(cors())
 app.use(compression())
 
 app.get('/api/questions', async (req,res) => {
-  const questions = await Questions.findAll()
+  const questions = await Questions.findAll({
+    include: [
+      {model: Answers}
+    ]
+  })
+
   res.json({questions: questions})
 })
 
