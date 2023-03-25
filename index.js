@@ -90,19 +90,11 @@ app.post('/api/users', async (req,res) => {
 })
 
 app.post('/api/users/login', async (req,res) => {
-
   const user = await Users.findOne({where:{email: req.body.email}})
   if(!user){
     res.json({sucess: false, mesage: 'not foudn'})
     return
   }
-
-  //if function(user.password, req.body.password)
-    {
-      res.json({...})
-    }
-   
-
 })
 
 app.listen(3000, () => {
