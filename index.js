@@ -1,14 +1,10 @@
 const express = require('express');
 const app = express();
-//instance 
 var cors = require('cors')
 
 var compression = require('compression')
 const dotenv = require('dotenv');
 dotenv.config()
-
-//middleware
-//cors
 
 const db = require('./models')
 const Questions = db.Questions

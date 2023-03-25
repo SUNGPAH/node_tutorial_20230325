@@ -1,9 +1,10 @@
-{
+require('dotenv').config(); // this is important!
+module.exports = {
   "development": {
-    "username": "admin",
-    "password": "nodejsiseasy",
-    "database": "database_dev",
-    "host": "database-2.cmoxchqytgu9.ap-northeast-2.rds.amazonaws.com",
+    "username": process.env.DB_USERNAME,
+    "password": process.env.DB_PW,
+    "database": process.env.DB_DBNAME,
+    "host": process.env.DB_HOST,
     "port": 3306,
     "dialect": "mysql"
   },
