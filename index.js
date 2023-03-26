@@ -14,8 +14,6 @@ const Users = db.Users
 const axios = require('axios')
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
-const { EmptyResultError } = require('sequelize');
-
 
 app.use(express.json())
 app.use(cors())
