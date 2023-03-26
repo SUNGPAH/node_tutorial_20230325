@@ -26,9 +26,8 @@ curl https://api.openai.com/v1/completions \
   }'
 
 
-curl -X POST -H "Content-Type: application/json" -d '{"email":"sungpah@ringleplus.com", "password": "sungpahgood", "username": "handsome"}' http://localhost:3000/api/users
-curl -X POST -H "Content-Type: application/json" -d '{"email":"sungpah@ringleplus.com", "password": "sungpahgood"}' http://localhost:3000/api/users/login
+curl -X POST -H "Content-Type: application/json" -d '{"email":"-", "password": "-", "username": "handsome"}' http://localhost:3000/api/users
+curl -X POST -H "Content-Type: application/json" -d '{"email":"-", "password": "-"}' http://localhost:3000/api/users/login
 
-
-curl -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InN1bmdwYWhAcmluZ2xlcGx1cy5jb20iLCJpYXQiOjE2Nzk3OTc1NTksImV4cCI6MTY3OTc5NzYxOX0.Nd1IYZQYOoOuj4RedlqL8bu8YOWh0swEFOkIWPaILw0" http://localhost:3000/api/usersWithToken
+curl -H "Authorization: Bearer sometoken" http://localhost:3000/api/usersWithToken
 curl  http://localhost:3000/api/usersWithToken
