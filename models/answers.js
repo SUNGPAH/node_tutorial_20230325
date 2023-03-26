@@ -5,8 +5,7 @@ const {
 module.exports = (sequelize, DataTypes) => {
   class Answers extends Model {
     static associate(models) {
-      // define association here
-      Answers.belongsTo(models.Questions)
+      Answers.belongsTo(models.Questions, {foreignKey: 'questionId'})
     }
   }
   Answers.init({

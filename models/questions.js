@@ -11,7 +11,8 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      Questions.hasMany(models.Answers)
+      // if we just hasMany -> then default foreignKey is QuestionId. This will be added when we call instance
+      Questions.hasMany(models.Answers, {foreignKey: 'questionId'})
     }
   }
   Questions.init({
